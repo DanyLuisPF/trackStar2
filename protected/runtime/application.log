@@ -1,0 +1,76 @@
+2014/05/12 20:35:05 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_project' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"description" text NOT NULL,
+	"create_time" datetime DEFAULT NULL,
+	"create_user_id" int(11) DEFAULT NULL,
+	"update_time" datetime DEFAULT NULL,
+	"update_user_id" int(11) DEFAULT NULL
+) ENIGNE=InnoDB
+2014/05/12 20:35:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENIGNE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_project' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"description" text NOT NULL,
+	"create_time" datetime DEFAULT NULL,
+	"create_user_id" int(11) DEFAULT NULL,
+	"update_time" datetime DEFAULT NULL,
+	"update_user_id" int(11) DEFAULT NULL
+) ENIGNE=InnoDB.
+2014/05/12 20:35:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 near "ENIGNE": syntax error. The SQL statement executed was: CREATE TABLE 'tbl_project' (
+	"id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	"name" varchar(255) NOT NULL,
+	"description" text NOT NULL,
+	"create_time" datetime DEFAULT NULL,
+	"create_user_id" int(11) DEFAULT NULL,
+	"update_time" datetime DEFAULT NULL,
+	"update_user_id" int(11) DEFAULT NULL
+) ENIGNE=InnoDB' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(1321): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\CDbMigration.php(228): CDbCommand->createTable('tbl_project', Array, 'ENIGNE=InnoDB')
+#2 C:\xampp\htdocs\TrackStar2\protected\migrations\m140512_183132_create_project_table.php(15): CDbMigration->createTable('tbl_project', Array, 'ENIGNE=InnoDB')
+#3 C:\xampp\htdocs\yii\framework\cli\commands\MigrateCommand.php(385): m140512_183132_create_project_table->up()
+#4 C:\xampp\htdocs\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140512_183132_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\xampp\htdocs\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\xampp\htdocs\yii\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 C:\xampp\htdocs\yii\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 C:\xampp\htdocs\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\xampp\htdocs\TrackStar2\protected\yiic.php(7): require_once('C:\xampp\htdocs...')
+#12 {main}
+---
+2014/05/12 20:38:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstar2.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2014/05/12 20:38:13 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ENIGNE=InnoDB' at line 9. The SQL statement executed was: CREATE TABLE `tbl_project` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`description` text NOT NULL,
+	`create_time` datetime DEFAULT NULL,
+	`create_user_id` int(11) DEFAULT NULL,
+	`update_time` datetime DEFAULT NULL,
+	`update_user_id` int(11) DEFAULT NULL
+) ENIGNE=InnoDB.
+2014/05/12 20:38:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ENIGNE=InnoDB' at line 9. The SQL statement executed was: CREATE TABLE `tbl_project` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`description` text NOT NULL,
+	`create_time` datetime DEFAULT NULL,
+	`create_user_id` int(11) DEFAULT NULL,
+	`update_time` datetime DEFAULT NULL,
+	`update_user_id` int(11) DEFAULT NULL
+) ENIGNE=InnoDB' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(1321): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\CDbMigration.php(228): CDbCommand->createTable('tbl_project', Array, 'ENIGNE=InnoDB')
+#2 C:\xampp\htdocs\TrackStar2\protected\migrations\m140512_183132_create_project_table.php(15): CDbMigration->createTable('tbl_project', Array, 'ENIGNE=InnoDB')
+#3 C:\xampp\htdocs\yii\framework\cli\commands\MigrateCommand.php(385): m140512_183132_create_project_table->up()
+#4 C:\xampp\htdocs\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140512_183132_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\xampp\htdocs\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\xampp\htdocs\yii\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 C:\xampp\htdocs\yii\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 C:\xampp\htdocs\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\xampp\htdocs\TrackStar2\protected\yiic.php(7): require_once('C:\xampp\htdocs...')
+#12 {main}
+---
