@@ -74,3 +74,92 @@ Stack trace:
 #11 C:\xampp\htdocs\TrackStar2\protected\yiic.php(7): require_once('C:\xampp\htdocs...')
 #12 {main}
 ---
+2014/05/14 21:30:07 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'project_
+            id' doesn't exist in table. The SQL statement executed was: ALTER TABLE `tbl_issue` ADD CONSTRAINT `fk_issue_project` FOREIGN KEY (`project_
+            id`) REFERENCES `tbl_project` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT.
+2014/05/14 21:32:03 [error] [php] require_once(C:\xampp\htdocs\TrackStar2\protected\migrations\m140515_020131_create_issue_user_and_assignment_tables.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\cli\commands\MigrateCommand.php:428)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\cli\commands\MigrateCommand.php(145): MigrateCommand->migrateDown()
+#1 unknown(0): MigrateCommand->actionDown()
+#2 C:\xampp\htdocs\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#3 C:\xampp\htdocs\yii\framework\console\CConsoleCommandRunner.php(67): MigrateCommand->run()
+#4 C:\xampp\htdocs\yii\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#6 C:\xampp\htdocs\yii\framework\yiic.php(33): CConsoleApplication->run()
+#7 C:\xampp\htdocs\TrackStar2\protected\yiic.php(7): require_once()
+
+2014/05/14 21:32:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_issue' already exists. The SQL statement executed was: CREATE TABLE `tbl_issue` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`description` text,
+	`project_id` int(11) DEFAULT NULL,
+	`type_id` int(11) DEFAULT NULL,
+	`status_id` int(11) DEFAULT NULL,
+	`owner_id` int(11) DEFAULT NULL,
+	`requester_id` int(11) DEFAULT NULL,
+	`create_time` datetime DEFAULT NULL,
+	`create_user_id` int(11) DEFAULT NULL,
+	`update_time` datetime DEFAULT NULL,
+	`update_user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB.
+2014/05/14 21:33:04 [error] [php] require_once(C:\xampp\htdocs\TrackStar2\protected\migrations\m140515_020131_create_issue_user_and_assignment_tables.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\cli\commands\MigrateCommand.php:428)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\cli\commands\MigrateCommand.php(145): MigrateCommand->migrateDown()
+#1 unknown(0): MigrateCommand->actionDown()
+#2 C:\xampp\htdocs\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#3 C:\xampp\htdocs\yii\framework\console\CConsoleCommandRunner.php(67): MigrateCommand->run()
+#4 C:\xampp\htdocs\yii\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#6 C:\xampp\htdocs\yii\framework\yiic.php(33): CConsoleApplication->run()
+#7 C:\xampp\htdocs\TrackStar2\protected\yiic.php(7): require_once()
+
+2014/05/14 21:34:38 [error] [php] require_once(C:\xampp\htdocs\TrackStar2\protected\migrations\m140515_020131_create_issue_user_and_assignment_tables.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\cli\commands\MigrateCommand.php:428)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\cli\commands\MigrateCommand.php(145): MigrateCommand->migrateDown()
+#1 unknown(0): MigrateCommand->actionDown()
+#2 C:\xampp\htdocs\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#3 C:\xampp\htdocs\yii\framework\console\CConsoleCommandRunner.php(67): MigrateCommand->run()
+#4 C:\xampp\htdocs\yii\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#6 C:\xampp\htdocs\yii\framework\yiic.php(33): CConsoleApplication->run()
+#7 C:\xampp\htdocs\TrackStar2\protected\yiic.php(7): require_once()
+
+2014/05/14 21:35:20 [error] [php] require_once(C:\xampp\htdocs\TrackStar2\protected\migrations\m140515_020131_create_issue_user_and_assignment_tables.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\cli\commands\MigrateCommand.php:428)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\cli\commands\MigrateCommand.php(145): MigrateCommand->migrateDown()
+#1 unknown(0): MigrateCommand->actionDown()
+#2 C:\xampp\htdocs\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#3 C:\xampp\htdocs\yii\framework\console\CConsoleCommandRunner.php(67): MigrateCommand->run()
+#4 C:\xampp\htdocs\yii\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#6 C:\xampp\htdocs\yii\framework\yiic.php(33): CConsoleApplication->run()
+#7 C:\xampp\htdocs\TrackStar2\protected\yiic.php(7): require_once()
+
+2014/05/14 21:38:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_issue' already exists. The SQL statement executed was: CREATE TABLE `tbl_issue` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`description` text,
+	`project_id` int(11) DEFAULT NULL,
+	`type_id` int(11) DEFAULT NULL,
+	`status_id` int(11) DEFAULT NULL,
+	`owner_id` int(11) DEFAULT NULL,
+	`requester_id` int(11) DEFAULT NULL,
+	`create_time` datetime DEFAULT NULL,
+	`create_user_id` int(11) DEFAULT NULL,
+	`update_time` datetime DEFAULT NULL,
+	`update_user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB.
+2014/05/14 21:38:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_issue' already exists. The SQL statement executed was: CREATE TABLE `tbl_issue` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) NOT NULL,
+	`description` text,
+	`project_id` int(11) DEFAULT NULL,
+	`type_id` int(11) DEFAULT NULL,
+	`status_id` int(11) DEFAULT NULL,
+	`owner_id` int(11) DEFAULT NULL,
+	`requester_id` int(11) DEFAULT NULL,
+	`create_time` datetime DEFAULT NULL,
+	`create_user_id` int(11) DEFAULT NULL,
+	`update_time` datetime DEFAULT NULL,
+	`update_user_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB.
